@@ -61,6 +61,27 @@ namespace UniversityRegistrar.Controllers
       return RedirectToAction("Details");
     }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     public ActionResult AddStudent(int id) //stretch goal to add inverse functionality for adding student to course and conversely courses to students
     {
       var thisCourse = _db.Courses.FirstOrDefault(courses => courses.CourseId == id);
