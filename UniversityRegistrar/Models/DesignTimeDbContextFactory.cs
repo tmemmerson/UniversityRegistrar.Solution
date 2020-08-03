@@ -9,7 +9,7 @@ namespace UniversityRegistrar.Models
   {
     UniversityRegistrarContext IDesignTimeDbContextFactory<UniversityRegistrarContext>.CreateDbContext(string[] args)
     {
-      IConfigurationRoot Configuration = new ConfigurationBuilder()
+      IConfigurationRoot configuration = new ConfigurationBuilder()
         .SetBasePath(Directory.GetCurrentDirectory())
         .AddJsonFile("appsettings.json")
         .Build();

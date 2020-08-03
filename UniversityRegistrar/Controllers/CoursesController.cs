@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using UniversityRegistrar.Models;
 using System.Collections.Generic;
 using System.Linq;
@@ -72,7 +73,7 @@ namespace UniversityRegistrar.Controllers
     {
       if (StudentId != 0)
       {
-        _db.StudentCourse.Add(new StudentCourse() { StudentId = StudentCourse, CourseId = course.CourseId });
+        _db.StudentCourse.Add(new StudentCourse() { StudentId = StudentId, CourseId = course.CourseId });
       }
       _db.SaveChanges();
       return RedirectToAction("Index");

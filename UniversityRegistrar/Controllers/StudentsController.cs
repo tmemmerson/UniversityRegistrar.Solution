@@ -9,7 +9,7 @@ namespace UniversityRegistrar.Controllers
 {
   public class StudentsController : Controller
   {
-    private readonly UniversityRegistrar _db;
+    private readonly UniversityRegistrarContext _db;
 
     public StudentsController(UniversityRegistrarContext db)
     {
@@ -18,7 +18,7 @@ namespace UniversityRegistrar.Controllers
 
     public ActionResult Index()
     {
-      return View(_db.Items.ToList());
+      return View(_db.Students.ToList());
     }
 
     public ActionResult Create()
@@ -39,7 +39,8 @@ namespace UniversityRegistrar.Controllers
       var thisStudent = _db.Students
         .Include(students => students.Courses)
         .ThenInclude(join => join.Course)
-        .FirstOrDefault(students => students.StudentId = id);
+        .FirstOrDefault(students => students.StudentId == id);
+      // ViewBag.Courses = _db.Courses.Where(courses => thisStudent.Courses.Contains(courses.CourseId)).ToList();
       return View(thisStudent);
     }
 
