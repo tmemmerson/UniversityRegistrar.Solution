@@ -1,0 +1,24 @@
+@{
+  Layout = "_Layout";
+}
+
+@model UniversityRegistrar.Models.Course
+
+<h1>Course Details</h1>
+<hr />
+<h3>@Html.DisplayFor(model => model.CourseTitle)</h3>
+
+@if(@Model.Students.Count == 0)
+{
+  <p>No Students Have Been Added To this Course</p>
+}
+else
+{
+  <h4>Students Enrolled: </h4>
+  <ul>
+    @foreach(var join in Model.Students)
+    {
+      <li>@Html.ActionLink($"{join.Students.Name}", "Details", "Students", new { id = @join.Students.StudentId })</li>
+    }
+  </ul>
+}
