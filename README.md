@@ -1,17 +1,17 @@
-**<h1 align = "center"> EAU CLAIRE'S HAIR & HEAD REMOVAL SALON**
+**<h1 align = "center"> University Registrar**
 
 
 <h1 align="center">
-  <img width="900" height="499" src="https://coding-assets.s3-us-west-2.amazonaws.com/img/eau-claires-hero.png">
+  <img width="900" height="450" src="https://coding-assets.s3-us-west-2.amazonaws.com/readme_hero_images/UniversityRegistrar.Solution.jpg">
 </h1>
 
-**<h1 align="center">"OFF WITH YOUR HAIR"**
+**<h1 align="center">"Register and fork over those dollas"**
 
 
 **<h4 align = "center">
   <a href="#✅requirements">Requirements</a> •
   <a href="#💻setup">Setup</a> •
-  <a href="#🔧protecting-your-data">Protecting Data</a> •
+  <a href="#🔧protecting-your-data">Protecting Data<a> •
   <a href="#📫questions-and-concerns">Q's & C's</a> •
   <a href="#🔧technologies-used">Technologies</a> •
   <a href="#🐛bugs">Bugs</a> •  
@@ -25,7 +25,7 @@
 
 </p>
 
-_Eau Claire seems to have lost her database and her head. She is in need of a database management system to collect client and stylist information. Clients are allowed one stylist, while stylists are allowed multiple clients. Claire has asked us to write a new application to allow her to track and view all her stylists, their details, their associated clients, as well as update and add information to those individuals' records._
+%%%EDIT%%% _description EDIT._
 
 
 ## **✅REQUIREMENTS**
@@ -41,7 +41,7 @@ _Eau Claire seems to have lost her database and her head. She is in need of a da
 
 copy this url to clone this project to your local system:
 ```html
-https://github.com/tmemmerson/OffWithYourHair.Solution.git
+https://github.com/tmemmerson/UniversityRegistrar.Solution.git
 ```
 
 <br>
@@ -73,19 +73,7 @@ dotnet run
 #### **Copy and paste this code snippet into the query field in MySql Workbench. Then execute w/ Control+Shift+Enter.**
 
 ```cs
-CREATE DATABASE `hair_salon` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
-CREATE TABLE `clients` (
-  `ClientId` int NOT NULL AUTO_INCREMENT,
-  `Name` varchar(255) DEFAULT NULL,
-  `Note` varchar(255) DEFAULT NULL,
-  `StylistId` int DEFAULT NULL,
-  PRIMARY KEY (`ClientId`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-CREATE TABLE `stylists` (
-  `StylistId` int NOT NULL AUTO_INCREMENT,
-  `Name` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`StylistId`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+%%%EDIT%%% import
 ```
 ## **🔧PROTECTING YOUR DATA**
 
@@ -125,7 +113,7 @@ _by default these are set to user:root and an empty password. if you are unsure,
 
 ## **📫QUESTIONS AND CONCERNS**
 
-_Questions, comments and concerns can be directed to the author [Tristan Emmerson](tristan@stickerslug.com)_
+_Questions, comments and concerns can be directed to the author [Tristan Emmerson](tristan@stickerslug.com) & [Micheal Hansen](micheal.hansen@gmail.com)_
 
 <br>
 
@@ -142,15 +130,17 @@ _**Database Mgmt:** [MySql Workbench](https://www.mysql.com/products/workbench/)
 
 ## **🐛Known Bugs**
 
-_**None as of:** 7/30/2020_
+_**None as of:** 8/3/2020_
 
 <br>
 
 
 ## **❤️Contributors**
 
-| [<img src="https://coding-assets.s3-us-west-2.amazonaws.com/img/tristan_emmerson.jpg" width="160px;"/><br /><sub><b>Tristan Emmerson</b></sub>](https://www.linkedin.com/in/tristan-emmerson/)<br /> |
+| [<img src="https://coding-assets.s3-us-west-2.amazonaws.com/micheal-hansen.jpg" width="160px;"/><br /><sub><b>Micheal Hansen</b></sub>](https://www.linkedin.com/in/michealhansen/)<br /> |
 | :-----------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+| [<img src="https://coding-assets.s3-us-west-2.amazonaws.com/img/tristan_emmerson.jpg" width="160px;"/><br /><sub><b>Tristan Emmerson</b></sub>](https://www.linkedin.com/in/tristan-emmerson/)<br /> |
+|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------: |
 
 <br>
 
