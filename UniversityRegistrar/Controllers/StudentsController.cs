@@ -33,5 +33,14 @@ namespace UniversityRegistrar.Controllers
       _db.SaveChanges();
       return RedirectToAction("Details", new { id = student.StudentId });
     }
+
+    public ActionResult Details(int id)
+    {
+      var thisStudent = _db.Students
+        .Include(students => students.Courses)
+        .ThenInclude(join => join.Course)
+        .FirstOrDefault(students => students.StudentId = id);
+      return View(thisStudent);
+    }
   }
 }
