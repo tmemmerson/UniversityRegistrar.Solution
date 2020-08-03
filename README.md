@@ -140,7 +140,7 @@ _**None as of:** 8/3/2020_
 | [<img src="https://coding-assets.s3-us-west-2.amazonaws.com/micheal-hansen.jpg" width="160px;"/><br /><sub><b>Micheal Hansen</b></sub>](https://www.linkedin.com/in/michealhansen/)<br /> |
 | :-----------------------------------------------------------------------------------------------------------------------------------------------------------------: |
 | [<img src="https://coding-assets.s3-us-west-2.amazonaws.com/img/tristan_emmerson.jpg" width="160px;"/><br /><sub><b>Tristan Emmerson</b></sub>](https://www.linkedin.com/in/tristan-emmerson/)<br /> |
-|
+
 
 <br>
 
