@@ -1,0 +1,24 @@
+@{
+  Layout="_Layout";
+}
+
+@model UniversityRegistrar.Models.Student
+
+<h2>Info for @Html.DisplayFor(model => model.Name)</h2>
+
+@if(@Model.Courses.Count == 0)
+{
+  <p>This student is not assigned to any courses</p>
+}
+else
+{
+  <ul>
+    @foreach(var join in Model.Courses)
+    {
+      <li>@Html.ActionLink($"{Model.Course.CourseTitle}", "Details", "Courses", new { id =  Model.Course.CourseId })</li>
+    }
+  </ul>
+}
+
+@Html.ActionLink("Back To Student List", "Index")
+@Html.ActionLink("Home", "Index", "Home")
