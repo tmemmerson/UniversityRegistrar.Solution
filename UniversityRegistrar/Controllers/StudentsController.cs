@@ -91,7 +91,7 @@ namespace UniversityRegistrar.Controllers
 
     public ActionResult Delete(int id)
     {
-      var thisStudent = __db.Students.FirstOrDefault(students => students.StudentId == id);
+      var thisStudent = _db.Students.FirstOrDefault(students => students.StudentId == id);
       return View(thisStudent);
     }
 
