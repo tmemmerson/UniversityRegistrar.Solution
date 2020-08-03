@@ -26,6 +26,12 @@ namespace UniversityRegistrar.Controllers
       return View();
     }
 
-    []
+    [HttpPost]
+    public ActionResult Create(Student student)
+    {
+      _db.Students.Add(student);
+      _db.SaveChanges();
+      return RedirectToAction("Details", new { id = student.StudentId });
+    }
   }
 }
