@@ -20,5 +20,12 @@ namespace UniversityRegistrar.Controllers
     {
       return View(_db.Items.ToList());
     }
+
+    public ActionResult Create()
+    {
+      return View();
+    }
+
+    []
   }
 }
