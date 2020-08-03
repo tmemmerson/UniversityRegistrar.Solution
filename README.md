@@ -20,12 +20,20 @@
 
 <br>
 <h2 align = "center">
+</h1>
 
 **ABOUT**
 
-</p>
 
-%%%EDIT%%% _description EDIT._
+* As registrar, I need to add name & enrollment date for students
+
+* As registrar, I need to add courses that the university offers
+
+* As registrar, I should be able to provide a course name & number 
+
+* As a registrar, I want to be able to assign students to a course
+
+* Courses have many students & students take courses concurrently
 
 
 ## **✅REQUIREMENTS**
