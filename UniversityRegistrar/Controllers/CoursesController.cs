@@ -49,11 +49,42 @@ namespace UniversityRegistrar.Controllers
     }
 
     [HttpPost]
-    public ActionResult Edit(Course course)
+    public ActionResult Edit(Course course, int StudentId)
     {
+      if (StudentId != 0)
+      {
+        _db.StudentCourse.Add(new StudentCourse() { StudentId = StudentId, CourseId = course.CourseId });
+      }
       _db.Entry(course).State = EntityState.Modified;
       _db.SaveChanges();
       return RedirectToAction("Details");
+    }
+
+    public ActionResult AddStudent(int id) //stretch goal to add inverse functionality for adding student to course and conversely courses to students
+    {
+      var thisCourse = _db.Courses.FirstOrDefault(courses => courses.CourseId == id);
+      ViewBag.StudentId = new SelectList(_db.Students, "StudentId", "Name");
+      return View(thisCourse);
+    }
+
+    [HttpPost]
+    public ActionResult AddStudent(Course course, int StudentId) //stretch ^
+    {
+      if (StudentId != 0)
+      {
+        _db.StudentCourse.Add(new StudentCourse() { StudentId = StudentCourse, CourseId = course.CourseId });
+      }
+      _db.SaveChanges();
+      return RedirectToAction("Index");
+    }
+
+    [HttpPost]
+    public ActionResult DeleteStudent(int joinId)
+    {
+      var joinEntry = _db.StudentCourse.FirstOrDefault(entry => entry.StudentCourseId == joinId);
+      _db.StudentCourse.Remove(joinEntry);
+      _db.SaveChanges();
+      return RedirectToAction("Index");
     }
 
     public ActionResult Delete(int id)
